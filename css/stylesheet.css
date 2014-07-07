@@ -1,0 +1,695 @@
+/* 
+This is a custom css code, done by Woonyung Choi Jun 22, 2014 :)
+*/
+/* create flat rounded button */
+/**********************************/
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 1em;
+}
+
+/* icon image */
+img.resize1 {
+  width: 10%;
+}
+
+img.resize2 {
+  width: 15%;
+}
+
+.floatLeft {
+  float: left;
+}
+
+/*** ids ***/
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: gill_sans_stdregular;
+  color: #fff;
+  float: left;
+}
+
+#margin-top1,
+#margin-top2 {
+  height: 33.33333%;
+}
+
+/*** search box section ***/
+#searchSection {
+  width: 70%;
+  margin-top: 10px;
+  float: right;
+}
+
+/** search icon **/
+#inputBox {
+  width: 80%;
+  float: left;
+}
+
+.hidden {
+  /* it will not display until users click the button */
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.inputForm {
+  float: left;
+  border: 0px solid #006;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  width: 60%;
+  height: 28px;
+  float: left;
+  margin-left: 5px;
+  font-family: gill_sans_stdregular;
+  font-size: 0.7em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #817f77;
+}
+
+.searchButton {
+  float: left;
+  border: 0px solid #006;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  width: 30%;
+  height: 30px;
+  margin-left: 5px;
+  font-family: gill_sans_stdregular;
+  font-size: 0.7em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #817f77;
+}
+
+.searchButton:hover,
+.searchButton:active {
+  background-color: white;
+}
+
+/** preference icon **/
+#settingSection {
+  width: 13%;
+  float: right;
+}
+
+img.settingButton {
+  height: 30px;
+  float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.7;
+}
+
+img.settingButton:hover {
+  opacity: 1;
+}
+
+/*** main boxes ***/
+#left-box {
+  height: 100%;
+  width: 66.66667%;
+  background-color: #fcbea0;
+}
+
+#left-top {
+  text-align: center;
+  height: 66.66667%;
+  background-color: #ddd8c8;
+}
+
+/** city name **/
+.bigType {
+  font-size: 3em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
+
+.smallType {
+  font-size: 2em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.mainType {
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+#left-bottom1 {
+  text-align: center;
+  width: 50%;
+  height: 33.33333%;
+  background-color: #fee267;
+}
+
+#left-bottom2 {
+  text-align: center;
+  width: 50%;
+  height: 33.33333%;
+  background-color: #d8e794;
+}
+
+#right-box {
+  height: 100%;
+  width: 33.33333%;
+  background-color: #cde7de;
+}
+
+#right-top {
+  text-align: center;
+  height: 33.33333%;
+  background-color: #fcbea0;
+}
+
+#right-middle {
+  text-align: center;
+  height: 33.33333%;
+  background-color: #ffdba3;
+}
+
+#right-bottom {
+  text-align: center;
+  height: 33.33333%;
+  background-color: #cde7de;
+}
+
+/********************* media query *********************/
+/************************************************/
+/* smartphone ----------- */
+/* portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .bigType {
+    font-size: 2em;
+  }
+
+  .smallType {
+    font-size: 1.5em;
+  }
+
+  /* icon image */
+  img.resize1 {
+    width: 8%;
+  }
+
+  img.resize2 {
+    width: 13%;
+  }
+
+  #margin-top1 {
+    height: 25%;
+  }
+
+  #margin-top2 {
+    height: 33.33333%;
+  }
+
+  #left-box {
+    width: 100%;
+    position: static;
+  }
+
+  #left-top {
+    width: 100%;
+    position: static;
+    height: 30%;
+  }
+
+  #left-bottom1,
+  #left-bottom2,
+  #right-box,
+  #right-top,
+  #right-middle,
+  #right-bottom {
+    width: 100%;
+    position: static;
+  }
+
+  /******** search section ********/
+  #searchSection {
+    width: 95%;
+    float: right;
+    margin-top: 5px;
+  }
+}
+/* landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  /* icon image */
+  img.resize1 {
+    width: 8%;
+  }
+
+  img.resize2 {
+    width: 10%;
+  }
+
+  .floatLeft {
+    float: left;
+  }
+
+  /*** ids ***/
+  #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: gill_sans_stdregular;
+    color: #fff;
+    float: left;
+  }
+
+  #margin-top1,
+  #margin-top2 {
+    height: 33.33333%;
+  }
+
+  /*** search box section ***/
+  #searchSection {
+    width: 90%;
+    margin-top: 10px;
+    float: right;
+    background-color: pink;
+  }
+
+  /** search icon **/
+  #inputBox {
+    width: 80%;
+    float: left;
+    background-color: steelblue;
+  }
+
+  .inputForm {
+    float: left;
+    border: 0px solid #006;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    width: 60%;
+    height: 20px;
+    float: left;
+    background-color: #caf6ee;
+  }
+
+  .searchButton {
+    float: left;
+    border: 0px solid #006;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    width: 30%;
+    height: 20px;
+    margin-left: 5px;
+    font-family: gill_sans_stdregular;
+    font-size: 0.8em;
+    letter-spacing: .1em;
+    background-color: #54cbec;
+  }
+
+  /** preference icon **/
+  #settingSection {
+    width: 13%;
+    float: left;
+  }
+
+  img.settingButton {
+    height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /*** main boxes ***/
+  #left-box {
+    height: 100%;
+    width: 66.66667%;
+    background-color: #fcbea0;
+  }
+
+  #left-top {
+    text-align: center;
+    height: 66.66667%;
+    background-color: #ddd8c8;
+  }
+
+  /** city name **/
+  .bigType {
+    font-size: 2em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+  }
+
+  .smallType {
+    font-size: 1em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  .mainType {
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  #left-bottom1 {
+    text-align: center;
+    width: 50%;
+    height: 33.33333%;
+    background-color: #fee267;
+  }
+
+  #left-bottom2 {
+    text-align: center;
+    width: 50%;
+    height: 33.33333%;
+    background-color: #d8e794;
+  }
+
+  #right-box {
+    height: 100%;
+    width: 33.33333%;
+    background-color: #cde7de;
+  }
+
+  #right-top {
+    text-align: center;
+    height: 33.33333%;
+    background-color: #fcbea0;
+  }
+
+  #right-middle {
+    text-align: center;
+    height: 33.33333%;
+    background-color: #ffdba3;
+  }
+
+  #right-bottom {
+    text-align: center;
+    height: 33.33333%;
+    background-color: #cde7de;
+  }
+}
+/* ipad ----------- */
+/* portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .bigType {
+    font-size: 2em;
+  }
+
+  .smallType {
+    font-size: 1.5em;
+  }
+
+  /* icon image */
+  img.resize1 {
+    width: 8%;
+  }
+
+  img.resize2 {
+    width: 13%;
+  }
+
+  #margin-top1 {
+    height: 25%;
+  }
+
+  #margin-top2 {
+    height: 33.33333%;
+  }
+
+  #left-box {
+    width: 100%;
+    position: static;
+  }
+
+  #left-top {
+    width: 100%;
+    position: static;
+    height: 30%;
+  }
+
+  #left-bottom1,
+  #left-bottom2,
+  #right-box,
+  #right-top,
+  #right-middle,
+  #right-bottom {
+    width: 100%;
+    position: static;
+  }
+
+  /******** search section ********/
+  #searchSection {
+    width: 95%;
+    float: right;
+    margin-top: 5px;
+  }
+}
+/* landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  /* icon image */
+  img.resize1 {
+    width: 8%;
+  }
+
+  img.resize2 {
+    width: 10%;
+  }
+
+  .floatLeft {
+    float: left;
+  }
+
+  /*** ids ***/
+  #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: gill_sans_stdregular;
+    color: #fff;
+    float: left;
+  }
+
+  #margin-top1,
+  #margin-top2 {
+    height: 33.33333%;
+  }
+
+  /*** search box section ***/
+  #searchSection {
+    width: 90%;
+    margin-top: 10px;
+    float: right;
+    background-color: pink;
+  }
+
+  /** search icon **/
+  #inputBox {
+    width: 80%;
+    float: left;
+    background-color: steelblue;
+  }
+
+  .inputForm {
+    float: left;
+    border: 0px solid #006;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    width: 60%;
+    height: 20px;
+    float: left;
+    background-color: #caf6ee;
+  }
+
+  .searchButton {
+    float: left;
+    border: 0px solid #006;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    width: 30%;
+    height: 20px;
+    margin-left: 5px;
+    font-family: gill_sans_stdregular;
+    font-size: 0.8em;
+    letter-spacing: .1em;
+    background-color: #54cbec;
+  }
+
+  /** preference icon **/
+  #settingSection {
+    width: 13%;
+    float: left;
+  }
+
+  img.settingButton {
+    height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /*** main boxes ***/
+  #left-box {
+    height: 100%;
+    width: 66.66667%;
+    background-color: #fcbea0;
+  }
+
+  #left-top {
+    text-align: center;
+    height: 66.66667%;
+    background-color: #ddd8c8;
+  }
+
+  /** city name **/
+  .bigType {
+    font-size: 2em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+  }
+
+  .smallType {
+    font-size: 1em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  .mainType {
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  #left-bottom1 {
+    text-align: center;
+    width: 50%;
+    height: 33.33333%;
+    background-color: #fee267;
+  }
+
+  #left-bottom2 {
+    text-align: center;
+    width: 50%;
+    height: 33.33333%;
+    background-color: #d8e794;
+  }
+
+  #right-box {
+    height: 100%;
+    width: 33.33333%;
+    background-color: #cde7de;
+  }
+
+  #right-top {
+    text-align: center;
+    height: 33.33333%;
+    background-color: #fcbea0;
+  }
+
+  #right-middle {
+    text-align: center;
+    height: 33.33333%;
+    background-color: #ffdba3;
+  }
+
+  #right-bottom {
+    text-align: center;
+    height: 33.33333%;
+    background-color: #cde7de;
+  }
+}
+/* Laptop - small screen ----------- */
+@media (min-width: 320px) and (max-width: 568px) {
+  .bigType {
+    font-size: 2em;
+  }
+
+  .smallType {
+    font-size: 1.5em;
+  }
+
+  /* icon image */
+  img.resize1 {
+    width: 8%;
+  }
+
+  img.resize2 {
+    width: 13%;
+  }
+
+  #margin-top1 {
+    height: 25%;
+  }
+
+  #margin-top2 {
+    height: 33.33333%;
+  }
+
+  #left-box {
+    width: 100%;
+    position: static;
+  }
+
+  #left-top {
+    width: 100%;
+    position: static;
+    height: 30%;
+  }
+
+  #left-bottom1,
+  #left-bottom2,
+  #right-box,
+  #right-top,
+  #right-middle,
+  #right-bottom {
+    width: 100%;
+    position: static;
+  }
+
+  /******** search section ********/
+  #searchSection {
+    width: 95%;
+    float: right;
+    margin-top: 5px;
+  }
+}

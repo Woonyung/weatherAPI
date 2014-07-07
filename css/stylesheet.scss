@@ -1,0 +1,508 @@
+/* 
+This is a custom css code, done by Woonyung Choi Jun 22, 2014 :)
+*/
+
+$fullSize: 100%;
+
+////// color variables //////
+$myColorRed: #fcbea0;
+$myColorOrange: #ffdba3;
+$myColorYellow: #fee267;
+$myColorGreen: #d8e794;
+
+/// humidity 
+$myColorBlue: #cde7de;
+
+
+$myColorLemon: #fdffdd;
+$myColorLightGray: #ddd8c8;
+$myColorDarkGray: #c2c2c2;
+
+////// font variables //////
+$myFont: gill_sans_stdregular;
+
+////////// mixins /////////
+
+@mixin fullScreenTraits {
+	width: $fullSize;
+	height: $fullSize;
+	margin: 0;
+}
+
+@mixin mainBoxTraits {
+	height: $fullSize;
+}
+
+
+@mixin centerAlign{
+	text-align: center;
+}
+
+/* create flat rounded button */
+@mixin buttonTraits{
+	float: left;
+
+	border: 0px solid #006;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/**********************************/
+
+html,body{
+	@include fullScreenTraits;
+	font-size: 1em;
+}
+
+/* icon image */
+img.resize1{
+	width: 10%;
+}
+
+img.resize2{
+	width: 15%;
+}
+
+
+.floatLeft {
+	float: left;
+}
+
+
+/*** ids ***/
+#container {
+	@include fullScreenTraits;
+
+	font-family: $myFont;	
+	color: #fff;
+	float: left;
+}
+
+#margin-top1,
+#margin-top2{
+	height: $fullSize/3;
+}
+
+
+/*** search box section ***/
+#searchSection{
+	width: 70%;
+	margin-top: 10px;
+	float: right;
+}
+
+/** search icon **/
+#inputBox{
+	// width: 200px;
+	width: 80%;
+	float: left;
+}
+
+	.hidden{
+		/* it will not display until users click the button */
+		display: none; 
+	}
+
+	.visible{
+		display: block;
+	}
+
+.inputForm{
+	@include buttonTraits;
+	width: 60%;	
+	height: 28px;
+	float: left;
+	margin-left: 5px;
+
+	font-family: $myFont;
+	font-size: 0.7em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+
+	background-color: rgba(255,255,255,0.3);
+	color: #817f77;
+
+}
+
+.searchButton{
+	@include buttonTraits;
+	width: 30%;
+	height: 30px;
+	margin-left: 5px;
+
+	font-family: $myFont;	
+    font-size: 0.7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+    background-color: rgba(255,255,255,0.7);
+    color: #817f77;
+}
+
+.searchButton:hover,
+.searchButton:active{
+	background-color: white;
+}
+
+/** preference icon **/
+#settingSection{
+	width: 13%;
+	float: right;
+}
+
+img.settingButton{
+	height: 30px;
+	float: right;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	opacity: 0.7;
+}
+
+img.settingButton:hover{
+	opacity: 1;
+}
+
+
+/*** main boxes ***/
+#left-box{
+	@include mainBoxTraits;
+
+	width: $fullSize/3 *2;
+	background-color: $myColorRed;
+}
+
+#left-top{
+	@include centerAlign;
+	height: $fullSize/3 *2;
+	background-color: $myColorLightGray;
+}
+	/** city name **/
+	.bigType {		
+		font-size: 3em;
+		letter-spacing: .3em;
+		text-transform: uppercase;
+	}
+
+	.smallType {
+		font-size: 2em;
+		letter-spacing: .2em;
+		text-transform: uppercase;
+	}
+
+	.mainType {
+		font-size: 1.5em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
+
+
+#left-bottom1{
+	@include centerAlign;
+	width: $fullSize/2;
+	height: $fullSize/3;
+	background-color: $myColorYellow;
+}
+
+#left-bottom2{
+	@include centerAlign;
+	width: $fullSize/2;
+	height: $fullSize/3;
+	background-color: $myColorGreen;
+}
+
+
+
+#right-box{
+	@include mainBoxTraits;
+	width: $fullSize/3;
+	background-color: $myColorBlue;
+}
+
+#right-top{
+	@include centerAlign;
+	height: $fullSize/3;
+	background-color: $myColorRed;
+}
+
+#right-middle{
+	@include centerAlign;
+	height: $fullSize/3;
+	background-color: $myColorOrange;
+}
+
+#right-bottom{
+	@include centerAlign;
+	height: $fullSize/3;
+	background-color: $myColorBlue;
+}
+
+///////////////////////////////////////////////////////////////
+/********************* media query *********************/
+@mixin mobilePosition{
+	width: 100%;
+	position: static;
+}
+
+@mixin smallPortrait{
+	.bigType{
+		font-size: 2em;
+	}
+
+	.smallType{
+		font-size: 1.5em;
+	}
+
+	/* icon image */
+	img.resize1{
+		width: 8%;
+	}
+
+	img.resize2{
+		width: 13%;
+	}
+
+	#margin-top1{
+		height: $fullSize/4;
+	}
+	#margin-top2{
+		height: $fullSize/3;
+	}
+
+
+	#left-box{	
+		@include mobilePosition;
+	}
+
+	#left-top{
+		@include mobilePosition;
+		height: 30%;
+	}
+
+	#left-bottom1,
+	#left-bottom2,
+	#right-box,
+	#right-top,
+	#right-middle,
+	#right-bottom {
+		@include mobilePosition;
+	}
+
+	/******** search section ********/
+	#searchSection{
+	width: 95%;
+	float: right;
+	margin-top: 5px;
+	}
+}
+
+@mixin smallLandscape{
+	html,body{
+		@include fullScreenTraits;
+		font-size: 1em;
+	}
+
+	/* icon image */
+	img.resize1{
+		// width: 10%;
+		width: 8%;
+	}
+
+	img.resize2{
+		// width: 15%;
+		width: 10%;
+	}
+
+
+	.floatLeft {
+		float: left;
+	}
+
+
+	/*** ids ***/
+	#container {
+		@include fullScreenTraits;
+
+		font-family: $myFont;	
+		color: #fff;
+		float: left;
+	}
+
+	#margin-top1,
+	#margin-top2{
+		height: $fullSize/3;
+	}
+
+
+	/*** search box section ***/
+	#searchSection{
+		width: 90%;
+		margin-top: 10px;
+		float: right;
+		background-color: pink;
+	}
+
+	/** search icon **/
+	#inputBox{
+		// width: 200px;
+		width: 80%;
+		float: left;
+		background-color: steelblue;
+	}
+
+	.inputForm{
+		@include buttonTraits;
+		width: 60%;	
+		height: 20px;
+		float: left;
+		background-color: #caf6ee;
+
+	}
+
+	.searchButton{
+		@include buttonTraits;
+		width: 30%;
+		height: 20px;
+		margin-left: 5px;
+
+	    font-family: $myFont;	
+	    font-size: 0.8em;
+	    letter-spacing: .1em;
+
+	    background-color: #54cbec;
+	}
+
+	/** preference icon **/
+	#settingSection{
+		width: 13%;
+		float : left;
+	}
+
+	img.settingButton{
+		height: 20px;
+		float: left;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+
+
+	/*** main boxes ***/
+	#left-box{
+		@include mainBoxTraits;
+
+		width: $fullSize/3 *2;
+		background-color: $myColorRed;
+	}
+
+	#left-top{
+		@include centerAlign;
+		height: $fullSize/3 *2;
+		background-color: $myColorLightGray;
+	}
+		/** city name **/
+		.bigType {		
+			font-size: 2em;
+			letter-spacing: .3em;
+			text-transform: uppercase;
+		}
+
+		.smallType {
+			font-size: 1em;
+			letter-spacing: .2em;
+			text-transform: uppercase;
+		}
+
+		.mainType {
+			font-size: 1em;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+		}
+
+
+	#left-bottom1{
+		@include centerAlign;
+		width: $fullSize/2;
+		height: $fullSize/3;
+		background-color: $myColorYellow;
+	}
+
+	#left-bottom2{
+		@include centerAlign;
+		width: $fullSize/2;
+		height: $fullSize/3;
+		background-color: $myColorGreen;
+	}
+
+
+
+	#right-box{
+		@include mainBoxTraits;
+		width: $fullSize/3;
+		background-color: $myColorBlue;
+	}
+
+	#right-top{
+		@include centerAlign;
+		height: $fullSize/3;
+		background-color: $myColorRed;
+	}
+
+	#right-middle{
+		@include centerAlign;
+		height: $fullSize/3;
+		background-color: $myColorOrange;
+	}
+
+	#right-bottom{
+		@include centerAlign;
+		height: $fullSize/3;
+		background-color: $myColorBlue;
+	}
+}
+
+
+/************************************************/
+
+/* smartphone ----------- */
+/* portrait */
+@media only screen 
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (orientation: portrait) {
+	@include smallPortrait;
+}
+
+/* landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (orientation: landscape){
+	@include smallLandscape; // will fix later...
+}
+
+/* ipad ----------- */
+/* portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+	@include smallPortrait;
+
+}
+
+/* landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+	@include smallLandscape;
+}
+
+/* Laptop - small screen ----------- */
+@media (min-width: 320px)and (max-width: 568px)  {
+	@include smallPortrait;
+}
